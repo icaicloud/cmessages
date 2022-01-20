@@ -117,7 +117,7 @@ class CMessagesAPI {
                 return $this->request($url,'POST', $body, ['Content-Type: application/json']);
                 break;
             default:
-                throw new JMOpenApiException('No support method');
+                throw new \LogicException('No support method');
                 // return $this->request($url,$method)
                 break;
         }
@@ -156,7 +156,7 @@ class CMessagesAPI {
                 }
                 break;
             default:
-                throw new JMOpenApiException('No support method');
+                throw new \LogicException('No support method');
                 break;
         }
 
