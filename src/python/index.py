@@ -29,7 +29,7 @@ class CMessagesAPI:
 
     def send_message(self, mobiles, content):
         """发送营销短信"""
-        return self.post('/sms/send_message', {'mobile': mobiles if isinstance(mobiles, [list, tuple]) else [mobiles], 'content': content})
+        return self.post('/sms/send_message', {'mobile': mobiles if isinstance(mobiles, (list, tuple)) else [mobiles], 'content': content})
 
     def prepare_payload(self, payload = None):
         """CMessages签名计算方式"""
